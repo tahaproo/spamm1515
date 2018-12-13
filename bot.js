@@ -31,4 +31,11 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
  });
 
  
+ client.on('guildMemberAdd', member => {
+const mohamed= member.guild.channels.get("513116523951423513");
+if(!mohamed) return;
+if(mohamed) {
+setTimeout(() => mohamed.send(`**Welcome To Crazy World`), 4000)        
+}
+});
 client.login(process.env.BOT_TOKEN);
